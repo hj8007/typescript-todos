@@ -60,11 +60,20 @@ module.exports = {
         printWidth: 80,
         bracketSpacing: true,
         arrowParens: 'avoid',
+        endOfLine: 'auto',
       },
     ],
     '@typescript-eslint/no-explicit-any': 'off',
     'prefer-const': 'off',
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'error',
+      },
+    },
+  ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
   },
